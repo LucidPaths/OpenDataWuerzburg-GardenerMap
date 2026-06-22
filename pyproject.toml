@@ -1,0 +1,19 @@
+[project]
+name = "wuerzburg-gardener-map"
+version = "0.1.0"
+description = "Gardener-focused Würzburg OpenData tree moisture map with scoped AI assistant."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "LucidPaths" }]
+keywords = ["opendata", "wuerzburg", "trees", "gardening", "dashboard", "ollama"]
+dependencies = []
+
+[project.scripts]
+wuerzburg-gardener-map = "wuerzburg_gardener_map.server:main"
+wuerzburg-gardener-snapshot = "wuerzburg_gardener_map.opendata:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"
