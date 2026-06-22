@@ -1,11 +1,11 @@
 # Würzburg Gardener Map
 
-A gardener-focused dashboard for Würzburg OpenData tree sensors.
+A gardener-focused dashboard for the full Würzburg OpenData tree cadastre plus live climate-tree sensors.
 
 It shows:
 
-- a live map of the OpenData climate-tree sensor locations
-- moisture/watering priority cards
+- a live map of all published city tree-cadastre locations
+- moisture/watering priority cards for trees that have live climate sensors
 - hover/click details for each tree
 - a compact history sparkline for recent soil-moisture readings
 - an Ollama-backed chatbox scoped only to the current tree snapshot
@@ -13,10 +13,11 @@ It shows:
 
 Data source: <https://opendata.wuerzburg.de/>
 
-Dataset used:
+Datasets used:
 
 ```text
-sls-klimabaeume
+baumkataster_stadt_wuerzburg  # all city tree cadastre locations
+sls-klimabaeume               # live soil-moisture sensor history for climate trees
 ```
 
 ## Quick start

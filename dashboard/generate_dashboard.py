@@ -8,14 +8,12 @@ SRC = ROOT / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
-from wuerzburg_gardener_map.opendata import build_snapshot
 from wuerzburg_gardener_map.server import build_static_html
 
 
 def main() -> int:
-    snapshot = build_snapshot(limit=1000)
     out = ROOT / "dashboard" / "index.html"
-    out.write_text(build_static_html(snapshot), encoding="utf-8")
+    out.write_text(build_static_html(), encoding="utf-8")
     print(out)
     return 0
 

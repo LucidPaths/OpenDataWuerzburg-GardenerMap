@@ -65,7 +65,8 @@ def build_chat_messages(question: str, snapshot: dict[str, Any]) -> list[dict[st
             "role": "system",
             "content": (
                 "You are a gardener-facing assistant for a Würzburg OpenData tree dashboard. "
-                "Answer only from the tree snapshot context. Be practical: watering priority, sensor condition, latest reading, and what to inspect next. "
+                "Answer only from the tree snapshot context. Quote exact counts from the context when asked; do not round, reinterpret, or substitute record counts for tree counts. "
+                "Be practical: watering priority, sensor condition, latest reading, and what to inspect next. "
                 "If the context does not contain the answer, say the dashboard does not show it. Do not invent locations, weather, policies, or routes."
             ),
         },
